@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style-starter.css">
+    <style>
+        /* Add your custom styles here */
+        .emi-calc-sec {
+            margin-top: 50px;
+        }
+
+        .range_indicator {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .ui-slider {
+            margin-top: 10px;
+        }
+
+        .wid_right {
+            list-style: none;
+        }
+
+        .wid_right li {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .main-btn {
+            background-color: #007bff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1><a class="navbar-brand mr-lg-5" href="index.html">
+                        <img src="images/logo.jpg" alt="AFS">
+                    </a></h1>
+                <!-- if logo is image enable this   
+          <a class="navbar-brand" href="#index.html">
+              <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+          </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Loans<span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <b> <a class="dropdown-item" href="services.html">Unsecured Loans</a> </b>
+                                <ul style="color:white">
+                                    <li><a class="dropdown-item1" href="personal_loan.html">Personal Loans</a></li><br>
+                                    <li><a class="dropdown-item1" href="business_loan.html">Business Loans</a></li><br>
+
+                                </ul>
+                                <b><a class="dropdown-item" href="services.html">Secured Loans</a> </b>
+                                <ul style="color:white">
+                                    <li><a class="dropdown-item1" href="home_loans.html">Home Loans</a></li><br>
+                                    <li><a class="dropdown-item1" href="property_loan.html">Loan Against Property</a>
+                                    </li><br>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Insurance<span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="health_insurance.html">Health Insurance </a>
+                                <a class="dropdown-item" href="life_insurance.html">Life Insurance</a>
+                                <a class="dropdown-item" href="general_insurance.html">General Insurance</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Investment<span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="coming_soon.html">Equity</a>
+                                <a class="dropdown-item" href="coming_soon.html">Real Estate</a>
+                                <a class="dropdown-item" href="crypto_currency.html">Cryptocurrency</a>
+                                <a class="dropdown-item" href="coming_soon.html">Mutual Funds</a>
+                                <a class="dropdown-item" href="coming_soon.html">PMS</a>
+
+                            </div>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Wealth Management Services<span class="fa fa-angle-down"></span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <a class="dropdown-item" href="index.html">Mutual Funds</a>
+                    <a class="dropdown-item" href="index.html">PMS Service</a>
+                    
+                  </div>
+                </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <div class="search-right">
+                            <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+
+                            <!--------------------search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <form action="#" method="GET" class="search-box">
+                                        <input type="search" placeholder="Enter Keyword" name="search"
+                                            required="required" autofocus="">
+                                        <button type="submit" class="btn"><span class="fa fa-search"
+                                                aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- ----------------/search popup -->
+                        </div>
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <!-- <div class="mobile-position">
+              <nav class="navigation">
+                <div class="theme-switch-wrapper">
+                  <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="mode-container">
+                      <i class="gg-sun"></i>
+                      <i class="gg-moon"></i>
+                    </div>
+                  </label>
+                </div>
+              </nav>
+            </div> -->
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ---------------------------Emi CAlculatore working------------------------ -->
+    <section class="emi-calc-sec d-flex justify-content-center align-items-center vh-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-md-10 col-sm-12 col-12">
+                    <div id="widget" class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                            <div class="wid_left c-card">
+                                <div class="form-group">
+                                    <div class="range_indicator">
+                                        <label for="loan-amount">Loan Amount</label>
+                                        <div class="indi_rgt"> ₹ <span id="selected-amount">5</span> Lakhs </div>
+                                    </div>
+                                    <div id="loan-amount"
+                                        class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                                            style="width: 74.7475%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                            style="left: 74.7475%;"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="range_indicator">
+                                        <label for="loan-duration">Loan Tenure</label>
+                                        <div class="indi_rgt"><span id="selected-duration">1</span> Years </div>
+                                    </div>
+                                    <div id="loan-duration"
+                                        class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                                            style="width: 100%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                            style="left: 100%;"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="range_indicator">
+                                        <label for="interest-rate">Interest</label>
+                                        <div class="indi_rgt"><span id="selected-interest">5</span> % </div>
+                                    </div>
+                                    <div id="interest-rate"
+                                        class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min"
+                                            style="width: 9.61538%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                            style="left: 9.61538%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                            <ul class="wid_right c-card blue-outline">
+                                <li>Total amount (Principal + Interest) <p> ₹ <span class="totalValue"></span></p>
+                                </li>
+                                <li>Indicative EMI <p> ₹ <span class="emiValue"></span> <span class="des-p">per
+                                            month</span></p>
+                                </li>
+                            </ul>
+                            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#refer-earn-modal"
+                                class="button main-btn blue block-btn apply-loan">
+                                Apply loan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/emi-calculator.js"></script>
+
+</body>
+
+</html>
