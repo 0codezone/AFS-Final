@@ -18747,3 +18747,11 @@ iframe {
     /* Adjust aspect ratio for smaller screens */
   }
 }
+
+.btn-style-1 {
+  color: #ff4500 !important;
+}
+
+.btn-style-1:hover {
+  color: #000 !important;
+}

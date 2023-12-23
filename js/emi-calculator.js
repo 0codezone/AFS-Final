@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
   }
 
-  setupSlider(loanAmountSlider, "#selected-amount", 1, 1, 10, 1);
+  setupSlider(loanAmountSlider, "#selected-amount", 1, 1, 20, 1);
   setupSlider(durationSlider, "#selected-duration", 1, 1, 20, 1);
   setupSlider(interestRateSlider, "#selected-interest", 1, 1, 20, 1);
 
