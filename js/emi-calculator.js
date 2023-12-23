@@ -1,64 +1,60 @@
 $(document).ready(function () {
-  // Function to update the loan amount, duration, and interest labels
+  var loanAmountSlider = $("#loan-amount"),
+    durationSlider = $("#loan-duration"),
+    interestRateSlider = $("#interest-rate");
+
   function updateLabels(slider, labelId) {
-    $(labelId).text(slider.slider("value"));
+    var value = slider.slider("value");
+    $(labelId).text(value);
   }
 
-  // Initialize sliders
-  $("#loan-amount").slider({
-    range: "min",
-    value: 5,
-    min: 1,
-    max: 10,
-    step: 1,
-    slide: function (event, ui) {
-      updateLabels($(this), "#selected-amount");
-      updateTotal();
-    },
-  });
+  function calculateEMI() {
+    var loanAmount = loanAmountSlider.slider("value") * 100000;
+    var loanDuration = durationSlider.slider("value");
+    var interestRate = interestRateSlider.slider("value") / 100;
 
-  $("#loan-duration").slider({
-    range: "min",
-    value: 1,
-    min: 1,
-    max: 30,
-    step: 1,
-    slide: function (event, ui) {
-      updateLabels($(this), "#selected-duration");
-      updateTotal();
-    },
-  });
+    var monthlyInterestRate = interestRate / 12;
+    var numberOfPayments = loanDuration * 12;
 
-  $("#interest-rate").slider({
-    range: "min",
-    value: 5,
-    min: 1,
-    max: 20,
-    step: 0.1,
-    slide: function (event, ui) {
-      updateLabels($(this), "#selected-interest");
-      updateTotal();
-    },
-  });
+    if (interestRate !== 0) {
+      var emi =
+        (loanAmount * monthlyInterestRate) /
+        (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
 
-  // Update total amount and EMI on slider change
-  function updateTotal() {
-    var loanAmount = $("#loan-amount").slider("value");
-    var loanDuration = $("#loan-duration").slider("value");
-    var interestRate = $("#interest-rate").slider("value") / 100;
+      var totalAmount = emi * numberOfPayments;
 
-    var principal = loanAmount * 100000; // Convert Lakhs to Rupees
-    var interest = (principal * interestRate * loanDuration) / 12;
-    var totalAmount = principal + interest;
-    var emi = totalAmount / (loanDuration * 12);
-
-    $(".totalValue").text(totalAmount.toFixed(2));
-    $(".emiValue").text(emi.toFixed(2));
+      $(".emiValue").text(emi.toFixed(0));
+      $(".interestValue").text((totalAmount - loanAmount).toFixed(0));
+      $(".totalValue").text(totalAmount.toFixed(0));
+    } else {
+      var totalAmount = loanAmount * numberOfPayments;
+      $(".emiValue").text((totalAmount / numberOfPayments).toFixed(0));
+      $(".interestValue").text("0");
+      $(".totalValue").text(totalAmount.toFixed(0));
+    }
   }
+
+  function setupSlider(slider, labelId, defaultValue, min, max, step) {
+    slider.slider({
+      range: "min",
+      value: defaultValue,
+      min: min,
+      max: max,
+      step: step,
+      change: function (event, ui) {
+        updateLabels(slider, labelId);
+        calculateEMI();
+      },
+    });
+  }
+
+  setupSlider(loanAmountSlider, "#selected-amount", 1, 1, 10, 1);
+  setupSlider(durationSlider, "#selected-duration", 1, 1, 20, 1);
+  setupSlider(interestRateSlider, "#selected-interest", 1, 1, 20, 1);
 
   // Initial update
-  updateLabels($("#loan-amount"), "#selected-amount");
-  updateLabels($("#loan-duration"), "#selected-duration");
-  updateLabels($("#interest-rate"), "#selected-interest");
-  updateTotal();
+  updateLabels(loanAmountSlider, "#selected-amount");
+  updateLabels(durationSlider, "#selected-duration");
+  updateLabels(interestRateSlider, "#selected-interest");
+  calculateEMI(); // Calculate EMI initially
 });

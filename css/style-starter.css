@@ -18456,6 +18456,7 @@ form.signin-form {
 
 .w3l-footer7 ul.phone-numbers {
   margin-bottom: 30px;
+  text-align: start;
 }
 
 .w3l-footer7 .main-social-footer7 a {
@@ -18718,4 +18719,31 @@ form.signin-form {
   line-height: 26px;
   color: black;
   font-family: 'Open Sans', sans-serif;
+}
+
+
+.map {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* Aspect ratio for responsive iframe */
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+
+  /* Adjust styles for mobile devices */
+  .map {
+    padding-bottom: 75%;
+    /* Adjust aspect ratio for smaller screens */
+  }
 }
