@@ -490,7 +490,12 @@ p.sub.light-blue {
 }
 
 #widget .ui-slider .ui-slider-handle {
-    margin-left: -6px
+    margin-left: -6px;
+    transition: all .2s ease-in-out;
+}
+
+#widget .ui-slider .ui-slider-handle:hover {
+    transform: scale(1.2);
 }
 
 .banner-sub-head span {

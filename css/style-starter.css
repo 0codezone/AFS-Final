@@ -15384,8 +15384,16 @@ a.view:hover {
 }
 
 .w3l-main-slider .banner-info-bg {
+  box-shadow: 0px 0px 5px white;
   max-width: 800px;
   margin: 0 auto;
+  transition: 0.3s ease-in-out;
+}
+
+.w3l-main-slider .banner-info-bg:hover {
+  box-shadow: 0px 0px 15px white;
+  transform: scale(1.05);
+
 }
 
 .w3l-main-slider p.text-label {
@@ -17303,9 +17311,13 @@ a.read span {
   position: relative;
   z-index: 1;
   border-radius: 8px;
-  box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.03);
   background-color: var(--bg-color);
   transition: .3s;
+}
+
+.grids-feature .area-box {
+  box-shadow: 0px 0px 5px white;
+
 }
 
 .w3l-bottom-grids-6 h4 a.title-head {
