@@ -55,6 +55,30 @@ Author URL: http://MyKnot Services.com
       }
     }
   </style>
+  <style>
+    .mode-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: white;
+    }
+
+    .gg-sun,
+    .gg-moon {
+      font-size: 20px;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    body.dark-mode a {
+      color: #bb86fc;
+    }
+  </style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,7 +95,7 @@ Author URL: http://MyKnot Services.com
 <body>
   <!--header-->
   <!--header-->
-  <header id="site-header" class="fixed-top">
+  <header id="site-header" class="fixed-top" style="background: rgba(0, 0, 0, 0.575);">
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
         <h1><a class="navbar-brand mr-lg-5" href="index.html">
@@ -99,7 +123,7 @@ Author URL: http://MyKnot Services.com
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                Loans<span class="fa fa-angle-down"></span>
+                Loans
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                 <b> <a class="dropdown-item" href="services.html">Unsecured Loans</a> </b>
@@ -120,7 +144,7 @@ Author URL: http://MyKnot Services.com
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                Insurance<span class="fa fa-angle-down"></span>
+                Insurance
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                 <a class="dropdown-item" href="health_insurance.html">Health Insurance </a>
@@ -132,7 +156,7 @@ Author URL: http://MyKnot Services.com
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                Investment<span class="fa fa-angle-down"></span>
+                Investment
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                 <a class="dropdown-item" href="coming_soon.html">Equity</a>
@@ -164,24 +188,23 @@ Author URL: http://MyKnot Services.com
             </li>
             <div class="search-right">
               <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-              <!-- search popup -->
+
+              <!--------------------search popup -->
               <div id="search" class="pop-overlay">
                 <div class="popup">
-
                   <form action="#" method="GET" class="search-box">
                     <input type="search" placeholder="Enter Keyword" name="search" required="required" autofocus="">
                     <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
                   </form>
-
                 </div>
                 <a class="close" href="#close">×</a>
               </div>
-              <!-- /search popup -->
+              <!-- ----------------/search popup -->
             </div>
           </ul>
         </div>
         <!-- toggle switch for light and dark theme -->
-        <!-- <div class="mobile-position">
+        <div class="mobile-position">
           <nav class="navigation">
             <div class="theme-switch-wrapper">
               <label class="theme-switch" for="checkbox">
@@ -193,7 +216,7 @@ Author URL: http://MyKnot Services.com
               </label>
             </div>
           </nav>
-        </div> -->
+        </div>
         <!-- //toggle switch for light and dark theme -->
       </nav>
     </div>
@@ -212,7 +235,7 @@ Author URL: http://MyKnot Services.com
   </section>
   <!-- //about breadcrumb -->
   <!--/contact-->
-  <section class="w3l-contact-11 py-5">
+  <section class="w3l-contact-11 py-5" style="background-color: rgb(255, 255, 255);">
     <div class="contacts-main py-lg-5 py-md-4">
       <div class="title-content text-center">
         <h6 class="sub-title">Contact Us</h6>
@@ -379,10 +402,13 @@ Author URL: http://MyKnot Services.com
     $(window).on("scroll", function () {
       var scroll = $(window).scrollTop();
 
-      if (scroll >= 80) {
+      if (scroll >= 100) {
         $("#site-header").addClass("nav-fixed");
+        $("#site-header").css("background-color", "black");
+
       } else {
         $("#site-header").removeClass("nav-fixed");
+        $("#site-header").css("background-color", "rgba(0, 0, 0, 0.575)");
       }
     });
 
@@ -404,6 +430,19 @@ Author URL: http://MyKnot Services.com
   <!--//MENU-JS-->
 
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change', () => {
+      const isDarkMode = checkbox.checked;
+      document.body.classList.toggle('dark-mode', isDarkMode);
+
+      // Set text color for all <p> elements
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach((paragraph) => {
+        paragraph.style.color = isDarkMode ? 'white' : ''; // Set your default text color here
+      });
+    });
+  </script>
 
 </body>
 

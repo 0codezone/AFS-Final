@@ -14239,63 +14239,6 @@ a.text-dark:focus {
   clip: auto;
 }
 
-/* -----------------------------white theme  */
-/* :root {
-  --primary-color: #E6BF00;
-  --secondary-color: #E6BF00;
-  --font-color: #787e92;
-  --bg-color: #fff;
-  --heading-color: #232735;
-  --border-radius: 6px;
-  --border-color: #ddd;
-  --border-light: #ddd;
-  --nav-color: #232735;
-  --footer-bg: #0d0f15;
-  --dropdown-color: #fff;
-  --bg-light: rgba(147, 107, 232, 0.05);
-  --iframe-filter: grayscale(0%);
-  --widget-bg: #231f20;
-} */
-
-
-
-/* ----------------------------------- dark 6   */
-:root {
-  --primary-color: #ff8c00;
-  --secondary-color: #ff8c00;
-  --font-color: #dcdcdc;
-  --bg-color: #000;
-  --footer-bg: #000000;
-  --heading-color: #ff4500;
-  --border-color: #cc7000;
-  --border-light: #cc7000;
-  --nav-color: #ff4500;
-  --bg-light: #331d00;
-  --dropdown-color: #663300;
-  --iframe-filter: brightness(130%);
-  --widget-bg: #331d00;
-}
-
-
-
-/* ---------------------------------------------------------------- */
-/* ---------------------------------------------------------------- */
-/* [data-theme="dark"] {
-  --primary-color: #E6BF00;
-  --secondary-color: #E6BF00;
-  --font-color: #afafaf;
-  --bg-color: #000;
-  --footer-bg: #000000;
-  --heading-color: #ddd;
-  --border-color: #333;
-  --border-light: #444;
-  --nav-color: #fff;
-  --bg-light: #131617;
-  --dropdown-color: #191c1d;
-  --iframe-filter: grayscale(100%);
-  --widget-bg: #131617;
-} */
-
 
 
 .noscroll {
@@ -14609,8 +14552,7 @@ a.link-style:hover:before {
 }
 
 .sub-title {
-  font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 2em;
   color: var(--secondary-color);
   text-transform: uppercase;
@@ -14869,11 +14811,11 @@ header {
   font-size: 1em;
   font-weight: 400;
   position: relative;
-  color: var(--heading-color);
+  color: white;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 
 a.dropdown-item {
@@ -14961,9 +14903,9 @@ nav ul li a:hover {
 }
 
 
-.nav-fixed .navbar-expand-lg .navbar-nav li.nav-item.active .nav-link {
-  color: var(--primary-color);
-}
+/* .nav-fixed .navbar-expand-lg .navbar-nav li.nav-item.active .nav-link {
+  color: var(--green);
+} */
 
 .dropdown-item:hover,
 .dropdown-item:focus {
@@ -15421,7 +15363,7 @@ a.view:hover {
 }
 
 .w3l-main-slider .banner-view {
-  background: url(../images/personal_loan_banner.PNG) no-repeat center;
+  background: url(../images/personal_loan_crousel.avif) no-repeat center;
   background-size: cover;
   min-height: 760px;
   position: relative;
@@ -15431,20 +15373,20 @@ a.view:hover {
 }
 
 .w3l-main-slider .banner-top1 {
-  background: url(../images/business_loan.png) no-repeat center;
+  background: url(../images/business-loan-crousel.jpg) no-repeat center;
   background-size: cover;
   min-height: 760px;
 
 }
 
 .w3l-main-slider .banner-top2 {
-  background: url(../images/home-loan-lp.jpg) no-repeat center;
+  background: url(../images/home-loan-crousel.jpg) no-repeat center;
   background-size: cover;
   min-height: 760px;
 }
 
 .w3l-main-slider .banner-top3 {
-  background: url(../images/banner01.jpg) no-repeat center;
+  background: url(../images/property_loan_crousel.jpeg) no-repeat center;
   background-size: cover;
   min-height: 760px;
 }
@@ -15458,7 +15400,7 @@ a.view:hover {
   right: 0;
   z-index: -1;
   background-color: #000;
-  opacity: .6;
+  opacity: 0.2;
 }
 
 @media (max-width:1200px) {
@@ -18235,12 +18177,11 @@ form.signin-form {
   color: var(--font-color);
   height: 54px;
   text-align: left;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   display: grid;
   grid-template-columns: .1fr 1fr;
   align-items: center;
   padding-left: 15px;
-  background-color: var(--bg-light);
   border: 1px solid var(--bg-light);
   border-radius: var(--border-radius);
 }
@@ -18767,3 +18708,81 @@ iframe {
 .btn-style-1:hover {
   color: #000 !important;
 }
+
+
+.w3l-main-slider .banner-info-bg h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* -----------------------------white theme  */
+/* :root {
+  --primary-color: #E6BF00;
+  --secondary-color: #E6BF00;
+  --font-color: #787e92;
+  --bg-color: #fff;
+  --heading-color: #232735;
+  --border-radius: 6px;
+  --border-color: #ddd;
+  --border-light: #ddd;
+  --nav-color: #232735;
+  --footer-bg: #0d0f15;
+  --dropdown-color: #fff;
+  --bg-light: rgba(147, 107, 232, 0.05);
+  --iframe-filter: grayscale(0%);
+  --widget-bg: #231f20;
+} */
+/* ----------------------------------- dark 5   */
+:root {
+  --primary-color: #001f3f;
+  --secondary-color: orangered;
+  --font-color: #bdc3c7;
+  --bg-color: #000;
+  --footer-bg: #000000;
+  --heading-color: #0074cc;
+  --border-color: #000c19;
+  --border-light: #001f3f;
+  --nav-color: #0074cc;
+  --bg-light: #00051a;
+  --dropdown-color: #003366;
+  --iframe-filter: brightness(130%);
+  --widget-bg: #00051a;
+}
+
+
+/* ----------------------------------- dark 6   */
+/* :root {
+  --primary-color: #ff8c00;
+  --secondary-color: #ff8c00;
+  --font-color: #dcdcdc;
+  --bg-color: #000;
+  --footer-bg: #000000;
+  --heading-color: #ff4500;
+  --border-color: #cc7000;
+  --border-light: #cc7000;
+  --nav-color: #ff4500;
+  --bg-light: #331d00;
+  --dropdown-color: #663300;
+  --iframe-filter: brightness(130%);
+  --widget-bg: #331d00;
+} */
+
+
+
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* [data-theme="dark"] {
+  --primary-color: #E6BF00;
+  --secondary-color: #E6BF00;
+  --font-color: #afafaf;
+  --bg-color: #000;
+  --footer-bg: #000000;
+  --heading-color: #ddd;
+  --border-color: #333;
+  --border-light: #444;
+  --nav-color: #fff;
+  --bg-light: #131617;
+  --dropdown-color: #191c1d;
+  --iframe-filter: grayscale(100%);
+  --widget-bg: #131617;
+} */
