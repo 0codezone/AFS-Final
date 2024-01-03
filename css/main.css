@@ -418,7 +418,7 @@ p.sub.light-blue {
 }
 
 #widget .ui-widget.ui-widget-content {
-    background: #ebebeb;
+    background: #ecf0f1;
     border: none;
     border-radius: 0;
     height: 4px;
@@ -427,7 +427,7 @@ p.sub.light-blue {
 }
 
 #widget .ui-widget-header {
-    background: #ff4500;
+    background: #182b3d;
     border-radius: 100px
 }
 
@@ -436,7 +436,7 @@ p.sub.light-blue {
     height: 20px;
     cursor: pointer;
     border-radius: 40px;
-    background: #ff4500;
+    background: #2ecc71;
     border: none;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -575,7 +575,7 @@ p.sub.light-blue {
 }
 
 .button.main-btn.blue::after {
-    background: #ff4500
+    background: #f39c12
 }
 
 .button.main-btn.blue::before {

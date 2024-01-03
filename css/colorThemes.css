@@ -17,6 +17,24 @@
   --widget-bg: #131617;
 } */
 
+/* -----------------------------white theme  */
+/* :root {
+  --primary-color: #E6BF00;
+  --secondary-color: #E6BF00;
+  --font-color: #787e92;
+  --bg-color: #fff;
+  --heading-color: #232735;
+  --border-radius: 6px;
+  --border-color: #ddd;
+  --border-light: #ddd;
+  --nav-color: #232735;
+  --footer-bg: #0d0f15;
+  --dropdown-color: #fff;
+  --bg-light: rgba(147, 107, 232, 0.05);
+  --iframe-filter: grayscale(0%);
+  --widget-bg: #231f20;
+} */
+
 /* -----------------------------purple theme  */
 /* :root {
   ---primary-color: #9b59b6;

@@ -75,7 +75,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
-      color: white;
+      color: rgb(44, 27, 27);
     }
 
     .gg-sun,
@@ -90,7 +90,7 @@
     }
 
     body.dark-mode a {
-      color: #bb86fc;
+      color: #fff;
     }
   </style>
   <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -147,8 +147,8 @@
     <!------------------------------------------------------********-------------------------------------------------- -->
     <!-------------------------------------------------------header------------------------------------------------------>
     <!------------------------------------------------------********-------------------------------------------------- -->
-    <header id="site-header" class="fixed-top" style="background: rgba(0, 0, 0, 0.575);">
-      <div class="container">
+    <header id="site-header" class="fixed-top">
+      <div class=" container">
         <nav class="navbar navbar-expand-lg stroke">
           <h1><a class="navbar-brand mr-lg-5" href="index.html">
               <img src="images/logo.jpg" alt="AFS">
@@ -256,7 +256,7 @@
             </ul>
           </div>
           <!-- toggle switch for light and dark theme -->
-          <div class="mobile-position">
+          <!-- <div class="mobile-position">
             <nav class="navigation">
               <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
@@ -268,7 +268,7 @@
                 </label>
               </div>
             </nav>
-          </div>
+          </div> -->
           <!-- //toggle switch for light and dark theme -->
         </nav>
       </div>
@@ -374,7 +374,7 @@
       <div class="container py-md-5">
         <!-- <div class="cwp4-two row align-items-center"> -->
         <!-- <div class="cwp4-text col-lg-4 mb-lg-0 mb-5"> -->
-        <h5 style="text-align: center;">WHY AXIS FINANCIAL SERVICES?</h5>
+        <h2 style="text-align: center; font-weight : bold; ">WHY AXIS FINANCIAL SERVICES?</h2>
         <!-- </div> -->
 
         <!-- </div> -->
@@ -464,7 +464,7 @@
           <a href="contact.html" class="btn btn-style-1 ml-2 mt-md-5 mt-4">Contact Us</a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-8 mt-md-0 mt-5">
-          <img src="images/blog-img-1.jpg" alt="" class="img-fluid">
+          <img src="images/blog-post-6.jpg" alt="" class="img-fluid">
         </div>
       </div>
     </div>
@@ -473,7 +473,7 @@
   <!------------------------------------------------------********-------------------------------------------------- -->
   <!------------------------------------------------------/Approach-section------------------------------------------------>
   <!------------------------------------------------------********-------------------------------------------------- -->
-  </section>
+
   <section class="approach-sec">
     </div>
     <div class="row">
@@ -681,9 +681,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <script>
     $('.sub-btn').click(function () {
@@ -1373,11 +1370,11 @@
 
       if (scroll >= 100) {
         $("#site-header").addClass("nav-fixed");
-        $("#site-header").css("background-color", "black");
+        $("#site-header").css("background-color", "white");
 
       } else {
         $("#site-header").removeClass("nav-fixed");
-        $("#site-header").css("background-color", "rgba(0, 0, 0, 0.575)");
+        $("#site-header").css("background-color", "rgba(255, 255, 255, 0.575)");
       }
     });
 
@@ -1402,7 +1399,8 @@
   <!-- -----------------------------------bootstrap  -->
   <script src="js/bootstrap.min.js"></script>
 
-  <script>
+  <!-- theme color mode   -->
+  <!-- <script>
     const checkbox = document.getElementById('checkbox');
     checkbox.addEventListener('change', () => {
       const isDarkMode = checkbox.checked;
@@ -1414,7 +1412,7 @@
         paragraph.style.color = isDarkMode ? 'white' : ''; // Set your default text color here
       });
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

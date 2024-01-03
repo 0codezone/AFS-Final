@@ -95,7 +95,7 @@ Author URL: http://MyKnot Services.com
 <body>
   <!--header-->
   <!--header-->
-  <header id="site-header" class="fixed-top" style="background: rgba(0, 0, 0, 0.575);">
+  <header id="site-header" class="fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
         <h1><a class="navbar-brand mr-lg-5" href="index.html">
@@ -204,7 +204,7 @@ Author URL: http://MyKnot Services.com
           </ul>
         </div>
         <!-- toggle switch for light and dark theme -->
-        <div class="mobile-position">
+        <!-- <div class="mobile-position">
           <nav class="navigation">
             <div class="theme-switch-wrapper">
               <label class="theme-switch" for="checkbox">
@@ -216,7 +216,7 @@ Author URL: http://MyKnot Services.com
               </label>
             </div>
           </nav>
-        </div>
+        </div> -->
         <!-- //toggle switch for light and dark theme -->
       </nav>
     </div>
@@ -404,11 +404,11 @@ Author URL: http://MyKnot Services.com
 
       if (scroll >= 100) {
         $("#site-header").addClass("nav-fixed");
-        $("#site-header").css("background-color", "black");
+        $("#site-header").css("background-color", "white");
 
       } else {
         $("#site-header").removeClass("nav-fixed");
-        $("#site-header").css("background-color", "rgba(0, 0, 0, 0.575)");
+        $("#site-header").css("background-color", "rgba(255, 255, 255, 0.575)");
       }
     });
 
@@ -430,7 +430,9 @@ Author URL: http://MyKnot Services.com
   <!--//MENU-JS-->
 
   <script src="js/bootstrap.min.js"></script>
-  <script>
+
+  // <!-- Dark Mode Toggle -->
+  <!-- <script>
     const checkbox = document.getElementById('checkbox');
     checkbox.addEventListener('change', () => {
       const isDarkMode = checkbox.checked;
@@ -442,7 +444,7 @@ Author URL: http://MyKnot Services.com
         paragraph.style.color = isDarkMode ? 'white' : ''; // Set your default text color here
       });
     });
-  </script>
+  </script> -->
 
 </body>
 
